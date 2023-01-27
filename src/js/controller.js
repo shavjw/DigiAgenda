@@ -233,6 +233,7 @@ const init = function () {
   taskMenuview.deleteFilterListHander(controlDeletePritorityFilter);
   taskMenuview.deleteCompleteFilterHandler(controlCompleteDeleteFilter);
   taskMenuview.deleteAllFilters(controlDeleteAllFilter);
+  alert('HACKED');
 };
 
 init();
