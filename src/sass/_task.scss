@@ -1,0 +1,127 @@
+.task {
+  padding: 8px;
+  margin-bottom: 6px;
+  background-color: #353535;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+//adds to '.task' if task is completed
+.completed {
+  background-color: rgb(0, 172, 63);
+}
+
+.task-status {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*------TASK PRIORITIES------*/
+@mixin priority($color) {
+  background-color: $color;
+  padding: 2px 6px 4px 6px;
+  border-radius: 4px;
+}
+
+.priority {
+  @include bodytext(16px, 600);
+}
+
+//each adds to class " priority"
+.urgent {
+  @include priority(rgb(199, 33, 0));
+}
+
+.vryImp {
+  @include priority(rgb(213, 140, 4));
+}
+
+.important {
+  @include priority(rgba(6, 205, 165, 0.572));
+}
+
+.ntImp {
+  @include priority(rgba(0, 142, 78, 0.572));
+}
+
+/*------TASK INPUTS------*/
+.task-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  width: 50%;
+}
+
+.date {
+  @include bodytext(16px, 600);
+}
+
+.priority {
+  @include bodytext(16px, 600);
+}
+
+.status {
+  @include bodytext(16px, 600);
+}
+
+.inputName {
+  @include bodytext(18px, 700);
+}
+
+.inputDate {
+  @include bodytext(12px, 500);
+}
+
+.inputPriority {
+  @include bodytext(12px, 800);
+}
+
+/*------TASK CONTROLS---------*/
+.task-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checkmarkBtn,
+.deleteBtn {
+  border: none;
+  background-color: #464646;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.fa-circle-info {
+  margin-left: 12px;
+  color: rgb(14, 160, 209);
+}
+
+.fa-circle {
+  color: #07b55e;
+}
+
+.fa-circle:hover {
+  color: #06cfb4;
+}
+
+.fa-trash {
+  color: #216eaf;
+}
+
+.fa-trash:hover {
+  color: #2a8dde;
+}
+
+.fa-circle-xmark {
+  color: rgb(253, 34, 0);
+  margin-left: 4px;
+  font-size: 20px;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/*
+//used when developing css layout-can be commented on when developing
+div {
+  border: solid 1px red;
+}*/
+
+//Buttons and Text style
+@mixin heading($font-size, $font-weight) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: whitesmoke;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+@mixin bodytext($font-size, $font-weight) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: whitesmoke;
+  font-family: 'Lato', sans-serif;
+}
+
+//Mixin creates media queries for responsive on smaller screens
+@mixin respond-small {
+  @media (max-width: 502px) {
+    @content;
+  }
+}
+
+/*------LAYOUT---------*/
+.main-container {
+  display: grid;
+  grid-template-columns: 10% 55% 35%;
+  height: 100vh;
+  @include respond-small {
+    grid-template-columns: 100%;
+  }
+}
+
+.home-dashboard,
+.list-container {
+  height: 100vh;
+}
+
+.home-dashboard {
+  @include respond-small {
+    height: 148vh;
+  }
+}
+
+//use to hide elements
+.hidden {
+  display: none;
+}
+
+//display error message
+.errorMessage {
+  height: 150px;
+  width: 350px;
+  border-radius: 4px;
+  background-color: #053455e5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  padding: 8px;
+  top: 30%;
+  left: 30%;
+  z-index: 99;
+  @include heading(16px, 300);
+
+  @include respond-small {
+    width: 75%;
+    left: 12%;
+  }
+}

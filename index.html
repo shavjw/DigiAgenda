@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="src/sass/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <script defer src="src/js/controller.js" type="module"></script>
+  </head>
+  <body>
+   
+
+    <div class="main-container">
+
+   <!----- NAVIGATOR SECTION ------->  
+    <div class = "navigation">
+      <div class="logo">
+        <img src="./src/imgs/logo.svg" class="logoimg">
+        <h2 class="project-title">DigiAgenda</h2>
+      </div>
+
+      <div class="copyright"><p> © This has been made by Shavaughan Watson</p></div>
+
+    </div>
+    
+
+ <!----- HOMEDASHBOARD SECTION -------> 
+      <div class="home-dashboard">
+   
+         <!----- Quote Info -------> 
+        <div class="quote-container"> 
+          <!-- html markup
+          <h2 class = "daily-quote">Quote of the day: "Strive not to be a success, but rather to be of value." by Albert Einstein</h2>
+          -->
+        </div>
+        
+        <div class="home-dashboard-info">
+         <!----- Weather Info -------> 
+          <div class="weather-container">
+          <!--html markup
+          <h3 class="wfont">Sep.30.2022</h1> 
+          <h3 class="wfont">5:30pm</h2>
+           <h4 class="wfont">Godstone</h2>
+
+            <div class="weather-details">
+            <div class="weather-icon">
+             <i class="fa-solid fa-sun"></i> 
+           </div>
+ 
+          <div class="weather-temp> 
+           <h1 class="wfont">22 C</h3>
+           <h4 class="wfont">Sunny</h3>
+            <h5 class="wfont">H 24/L 17 </h3>
+           </div> 
+            </div>`
+           --> 
+        </div>
+        <!----- Report Info -------> 
+        <div id="report-container">
+          <div id="progress"></div>
+          <div class="report-message-box"></div>
+        </div>
+</div>
+
+    <!----- CALENDER SECTION ------->
+        <div class="calendar"></div>
+    
+      </div>
+
+
+    <!----- ADGENDA-LIST SECTION ------->
+    <div class="list-container">
+
+
+      <!-----Agenda Title/Date Container ------->
+    <div class="agenda-title"></div>
+
+      <!-----Task List Container ------->
+    <ul class="agenda-list">
+ 
+    </ul>
+
+
+       <!-----Task Menu -------> 
+      <div class="task-menu hidden">
+        <button class ="filterMenubtn taskMenu-btns"><i class="fa-solid fa-bars"></i> Filter Options </button>
+        <button class="close-agenda-btn taskMenu-btns"><i class="fa-regular fa-circle-xmark"></i>Close Agenda </button>
+      
+        <button class= "removeAllTask-btn taskMenu-btns"> <i class="fa-solid fa-xmarks-lines"></i>Remove All Task</button>
+        
+        <button class= "createTaskBtn taskMenu-btns"><i class="fa-solid fa-plus"></i>Create New Task</button>
+
+   
+     <!----- FILTER & SORT MENUS ------->
+      <div class="filterMenu hidden">        
+      <form id = "filterForm ">
+
+        <!----- Sort Values ------->
+        <label for="sortFilters">Sort By:</label>
+        <select name="SortOptions" id="SortOptions">
+          <option value="none" class="sortOption">No Sort</option>
+          <option value="date" class="sortOption">Recent Due Date</option>
+        </select>
+
+         <!----- Filter Values ------->
+        <h3 class = "filterTitle">Status</h3>
+        <div>
+          <label>Completed</label>
+          <input type="checkbox" class ="filterBtns statusValue" name="completed" value="Completed">
+        </div>
+
+        <h3 class = "filterTitle">Priority</h3>
+        <div class="filterInput">
+          <label>Urgent</label>
+          <input type="checkbox" class ="filterBtns filterValue" id ="urgent" name="priority" value="Urgent">
+        </div>
+        <div class="filterInput">
+          <label>Very Important </label>
+          <input type="checkbox" class ="filterBtns filterValue" id ="vryImportant" name="priority" value="Very Important">
+        </div>
+        <div class="filterInput">
+          <label>Important </label>
+          <input type="checkbox" class ="filterBtns filterValue" id ="important" name="priority" value="Important">
+        </div>
+        <div class="filterInput">
+          <label>Not Important </label>
+          <input type="checkbox" class ="filterBtns filterValue" id ="ntimportant" name="priority" value="Not Important">
+
+        </div>
+
+        
+        <button class = "clearAllFilterbtn">Clear All Filters</button> 
+      </form>
+    </div> 
+       </div>
+
+      </div>
+
+      <!----- RENDER MESSAGE ------->
+      <div class="errorMessage hidden">
+        <!--
+        <p>Error has occured <i class="fa-solid fa-circle-exclamation"></i></p>
+        -->
+      </div>
+
+   </div> 
+
+
+
+ <!----- UPLOAD TASK WINDOW ------->
+   <div class="overlay hidden"></div>
+   <div class="form-submit-container hidden">
+    <h2 class = "add-task-title">Add New Task <button class = "closeBtn"> <i class="fa-solid fa-x"></i> </button></h2>  
+    <form class="js-form">
+      <label>Title</label> <br>
+      <input autofocus type="text" aria-label="Enter a new todo item" placeholder="E.g. Build a web app" class="taskName"> <br>
+      <label>Description</label>
+      <input type="text" id="description" name="description" class="taskDescription"> <br>
+      <label>Due Date</label>
+      <input type="date" name="date-time" class="taskDate"> 
+      <label>Priority</label>
+      <select name="priority" id="priority" class="taskPriority">
+        <option value="Urgent">Urgent</option>
+        <option value="Very Important">Very Important</option>
+        <option value="Important">Important</option>
+        <option value="Not Important">Not Urgent</option>
+      </select>
+      <br>
+      <input type ="submit" value="Add new Task" class="submitbtn"> 
+    </form>
+
+  
+
+    </div>
+
+
+
+   
+  
+  
+ 
+ 
+    </body>
+    
+    <script src="https://kit.fontawesome.com/f2846bc95d.js" crossorigin="anonymous"></script>
+  </body>
+</html>

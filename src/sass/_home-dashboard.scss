@@ -1,0 +1,34 @@
+/*-------CUSTOM SCROLLBAR--------*/
+.home-dashboard {
+  background-image: linear-gradient(to top, #0ee2e28b, #216faff0),
+    url('/src/imgs/sky-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: auto;
+}
+
+.home-dashboard::-webkit-scrollbar {
+  width: 1em;
+}
+
+.home-dashboard::-webkit-scrollbar-track {
+  border-radius: 6px;
+  background-color: #053455d3;
+}
+
+.home-dashboard::-webkit-scrollbar-thumb {
+  background: #a0c8e468;
+  border-radius: 6px;
+}
+
+.home-dashboard::-webkit-scrollbar-thumb:hover {
+  background: #627d8f68;
+}
+
+/*------HOME-DASHBORAD_INFO---------*/
+.home-dashboard-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+}

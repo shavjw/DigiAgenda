@@ -1,0 +1,57 @@
+.wdate {
+  @include bodytext(20px, 400);
+}
+
+.wtime {
+  @include bodytext(46px, 600);
+
+  @include respond-small {
+    @include bodytext(36px, 600);
+  }
+}
+
+.wtemp {
+  @include bodytext(14px, 200);
+}
+
+.wMainTemp {
+  @include bodytext(22px, 700);
+}
+
+.wmin-max {
+  @include bodytext(16px, 600);
+}
+
+.weather-container {
+  margin-left: 20px;
+  @include respond-small {
+    margin-left: 0px;
+  }
+}
+
+.weather-info {
+  display: flex;
+  margin-right: 20px;
+  grid-column: 1 / span 4;
+  grid-row: 1 / span 1;
+}
+
+.weather-icon {
+  margin-right: 4px;
+  img {
+    margin-top: 6px;
+  }
+}
+
+.sun-icon {
+  height: 50px;
+  width: 50px;
+  color: whitesmoke;
+}
+
+.weather-container {
+  padding: 6px;
+  background-color: #a0c8e468;
+  border-radius: 4px;
+  height: fit-content;
+}

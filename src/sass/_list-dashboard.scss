@@ -1,0 +1,51 @@
+.list-container {
+  background-color: $side-menu-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.agenda-title {
+  border-bottom: #5e5e5e solid 0.5px;
+  @include bodytext(16px, 500);
+  padding: 8px;
+
+  @include respond-small {
+    @include bodytext(12px, 500);
+  }
+}
+
+.agenda-list {
+  overflow: auto;
+  height: 80%;
+
+  background-color: #000710;
+  padding: 8px;
+
+  p {
+    @include bodytext(16px, 500);
+    text-align: center;
+  }
+}
+
+.agenda-list::-webkit-scrollbar {
+  width: 1em;
+}
+
+.agenda-list::-webkit-scrollbar-track {
+  border-radius: 6px;
+  background-color: #494949d3;
+}
+
+.agenda-list::-webkit-scrollbar-thumb {
+  background: #1e1e1ebc;
+  border-radius: 6px;
+}
+
+.agenda-list::-webkit-scrollbar-thumb:hover {
+  background: #818181bc;
+}
+
+.taskTally {
+  @include heading(12px, 500);
+}

@@ -1,0 +1,8 @@
+.quote-container {
+    padding: 6px;
+    background-color: #a0c8e468;
+  }
+  
+  .daily-quote {
+    @include bodytext(16px, 500);
+  }

@@ -1,0 +1,41 @@
+$side-menu-color: #000710;
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: $side-menu-color;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.logoimg {
+  height: 100px;
+  text-align: center;
+
+  @include respond-small {
+    height: 75px;
+    margin-bottom: 6px;
+  }
+}
+.project-title {
+  margin-top: 4px;
+  @include heading(18, 800);
+}
+
+.copyright {
+  padding: 6px;
+  p {
+    @include bodytext(12px, 300);
+
+    @include respond-small {
+      margin-bottom: 6px;
+    }
+  }
+}

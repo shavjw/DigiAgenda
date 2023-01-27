@@ -1,0 +1,111 @@
+//CSS for the whole Calender
+.calendar {
+  margin-top: 26px;
+  padding: 6px;
+}
+
+.fc-media-screen {
+  background-color: whitesmoke;
+}
+
+.fc-toolbar-title {
+  @include bodytext(12px, 700);
+  color: #484848;
+
+  @include respond-small {
+    text-align: center;
+    color: #484848;
+    padding: 2px;
+  }
+}
+
+.fc-daygrid-day-top {
+  @include respond-small {
+    padding: 6px;
+
+    a {
+      @include bodytext(16px, 700);
+      color: #484848;
+    }
+  }
+}
+
+.fc-toolbar-chunk {
+  @include respond-small {
+    display: flex;
+  }
+}
+.fc-button-group {
+  @include respond-small {
+    display: flex;
+    gap: 6px;
+  }
+}
+.fc-col-header-cell-cushion {
+  @include bodytext(16px, 800);
+  color: #484848;
+}
+
+.fc-daygrid-day-number {
+  @include bodytext(14px, 600);
+  color: #484848;
+  cursor: pointer;
+}
+
+/*------CALENDER EVENTS---------*/
+.fc-event-title {
+  @include bodytext(14px, 600);
+
+  @include respond-small {
+    @include bodytext(10px, 600);
+  }
+}
+
+.fc-event-title-container {
+  background: linear-gradient(90deg, #0ee2e28b, #216faff0);
+}
+
+.list-tab {
+  background-color: rgb(6, 70, 189);
+  border-radius: 4px;
+  padding: 4px 6px 4px 6px;
+  cursor: pointer;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include respond-small {
+    flex-direction: column;
+    gap: 6px;
+    padding: 6px;
+  }
+
+  a {
+    @include bodytext(12px, 400);
+
+    @include respond-small {
+      @include bodytext(10px, 400);
+    }
+  }
+
+  i {
+    color: whitesmoke;
+    @include respond-small {
+      margin-right: 10px;
+    }
+  }
+
+  @include respond-small {
+    width: 100%;
+  }
+}
+
+.list-tab:hover {
+  background: linear-gradient(90deg, rgb(0, 216, 137) 0%, rgb(0, 183, 24) 100%);
+}
+
+.fc-daygrid-day-number:hover {
+  color: #08aace;
+}

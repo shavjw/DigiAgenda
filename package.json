@@ -1,0 +1,30 @@
+{
+  "name": "digital-agenda",
+  "version": "1.0.0",
+  "description": "Productivity-Application",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Shavaughan Watson",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/circular-json": "^0.4.0",
+    "@types/dotenv": "^8.2.0",
+    "parcel": "^2.7.0"
+  },
+  "dependencies": {
+    "@fullcalendar/core": "^5.11.3",
+    "@fullcalendar/daygrid": "^5.11.3",
+    "@fullcalendar/interaction": "^5.11.3",
+    "@fullcalendar/list": "^5.11.3",
+    "@fullcalendar/timegrid": "^5.11.3",
+    "chart.js": "^4.0.1",
+    "circular-json": "^0.5.9",
+    "express": "^4.18.2",
+    "js-circle-progress": "^0.2.4",
+    "mongoose": "^6.8.4",
+    "progressbar.js": "^1.1.0"
+  }
+}
