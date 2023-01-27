@@ -205,6 +205,10 @@ const controlEditTask = function (id) {
   }
 };
 
+const newFeature = function () {
+  console.log(`Welcome to Application`);
+};
+
 const init = function () {
   //API Controls
   quoteView.addQuoteHandler(controlQuote);
@@ -233,6 +237,7 @@ const init = function () {
   taskMenuview.deleteFilterListHander(controlDeletePritorityFilter);
   taskMenuview.deleteCompleteFilterHandler(controlCompleteDeleteFilter);
   taskMenuview.deleteAllFilters(controlDeleteAllFilter);
+  newFeature();
 };
 
 init();
