@@ -27,7 +27,7 @@ class weatherView extends View {
     <div class="weather-icon">
     <h4 class="wtemp">${this._data.city}</h4>
     <img src=${
-      this._data.description === 'Sun'
+      this._data.description === 'Sun' || 'Clear'
         ? sunIcon
         : this._data.description === 'Rain'
         ? rainIcon

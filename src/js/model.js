@@ -58,6 +58,7 @@ export const loadWeatherData = async function () {
     const { latitude, longitude } = position.coords;
 
     const data = await getJSON(WEATHER_API_URL(latitude, longitude));
+    console.log(data);
 
     state.weather = {
       city: data.name,
