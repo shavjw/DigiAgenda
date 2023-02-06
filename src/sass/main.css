@@ -1,12 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 * {
   margin: 0px;
   padding: 0px;
 }
 
+/*
+//used when developing css layout-can be commented on when developing
 div {
   border: solid 1px red;
-}
+}*/
 
 /*------LAYOUT---------*/
 .main-container {
@@ -52,7 +54,7 @@ div {
   font-size: 16px;
   font-weight: 300;
   color: whitesmoke;
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: 'Merriweather Sans', sans-serif;
 }
 @media (max-width: 502px) {
   .errorMessage {
@@ -73,18 +75,16 @@ div {
 .logo {
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin-top: 10px;
 }
 
 .logoimg {
   height: 100px;
-  width: 50px;
+  text-align: center;
 }
 @media (max-width: 502px) {
   .logoimg {
     height: 75px;
-    width: 37.5px;
     margin-bottom: 6px;
   }
 }
@@ -94,7 +94,7 @@ div {
   font-size: 18;
   font-weight: 800;
   color: whitesmoke;
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: 'Merriweather Sans', sans-serif;
 }
 
 .copyright {
@@ -104,7 +104,7 @@ div {
   font-size: 12px;
   font-weight: 300;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 @media (max-width: 502px) {
   .copyright p {
@@ -114,7 +114,12 @@ div {
 
 /*-------CUSTOM SCROLLBAR--------*/
 .home-dashboard {
-  background-image: linear-gradient(to top, rgba(14, 226, 226, 0.5450980392), rgba(33, 111, 175, 0.9411764706)), url("/src/imgs/sky-background.jpg");
+  background-image: linear-gradient(
+      to top,
+      rgba(14, 226, 226, 0.5450980392),
+      rgba(33, 111, 175, 0.9411764706)
+    ),
+    url('/src/imgs/sky-background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   overflow: auto;
@@ -158,7 +163,7 @@ div {
   font-size: 16px;
   font-weight: 500;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   padding: 8px;
 }
 @media (max-width: 502px) {
@@ -166,7 +171,7 @@ div {
     font-size: 12px;
     font-weight: 500;
     color: whitesmoke;
-    font-family: "Lato", sans-serif;
+    font-family: 'Lato', sans-serif;
   }
 }
 
@@ -180,7 +185,7 @@ div {
   font-size: 16px;
   font-weight: 500;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   text-align: center;
 }
 
@@ -206,7 +211,7 @@ div {
   font-size: 12px;
   font-weight: 500;
   color: whitesmoke;
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: 'Merriweather Sans', sans-serif;
 }
 
 .task-menu {
@@ -239,7 +244,7 @@ div {
   font-size: 12px;
   font-weight: 400;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .removeAllTask-btn:hover,
@@ -262,7 +267,7 @@ div {
   font-size: 14px;
   font-weight: 500;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   color: #484848;
 }
 
@@ -282,7 +287,7 @@ div {
   font-size: 12px;
   font-weight: 300;
   color: whitesmoke;
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: 'Merriweather Sans', sans-serif;
 }
 
 .clearAllFilterbtn {
@@ -292,7 +297,7 @@ div {
   font-size: 12px;
   font-weight: 400;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   border-radius: 2px;
   cursor: pointer;
   margin-top: 6px;
@@ -311,16 +316,20 @@ div {
   font-size: 12px;
   font-weight: 500;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .createTaskBtn {
   font-size: 12px;
   font-weight: 500;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   border: none;
-  background: linear-gradient(90deg, rgba(14, 226, 226, 0.5450980392), rgba(33, 111, 175, 0.9411764706));
+  background: linear-gradient(
+    90deg,
+    rgba(14, 226, 226, 0.5450980392),
+    rgba(33, 111, 175, 0.9411764706)
+  );
   border-radius: 6px;
   padding: 4px;
 }
@@ -358,7 +367,7 @@ div {
   font-size: 16px;
   font-weight: 600;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .urgent {
@@ -398,42 +407,42 @@ div {
   font-size: 16px;
   font-weight: 600;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .priority {
   font-size: 16px;
   font-weight: 600;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .status {
   font-size: 16px;
   font-weight: 600;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .inputName {
   font-size: 18px;
   font-weight: 700;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .inputDate {
   font-size: 12px;
   font-weight: 500;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .inputPriority {
   font-size: 12px;
   font-weight: 800;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 /*------TASK CONTROLS---------*/
@@ -508,14 +517,14 @@ div {
   font-size: 16px;
   font-weight: 300;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .report-numbers {
   font-size: 18px;
   font-weight: 600;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 #Bar {
@@ -546,7 +555,7 @@ div {
   font-size: 20px;
   font-weight: 500;
   color: whitesmoke;
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: 'Merriweather Sans', sans-serif;
   display: flex;
   justify-content: space-between;
 }
@@ -572,7 +581,7 @@ input {
   font-size: 14px;
   font-weight: 500;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   color: #484848;
 }
 
@@ -580,7 +589,7 @@ label {
   font-size: 12px;
   font-weight: 500;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .taskName {
@@ -610,12 +619,12 @@ label {
   font-size: 14px;
   font-weight: 500;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   color: #484848;
 }
 @media (max-width: 502px) {
   .taskDate,
-.taskPriority {
+  .taskPriority {
     width: 100%;
   }
 }
@@ -623,7 +632,11 @@ label {
 .submitbtn {
   margin-top: 6px;
   cursor: pointer;
-  background: linear-gradient(90deg, rgba(14, 226, 226, 0.5450980392), rgba(33, 111, 175, 0.9411764706));
+  background: linear-gradient(
+    90deg,
+    rgba(14, 226, 226, 0.5450980392),
+    rgba(33, 111, 175, 0.9411764706)
+  );
   padding: 8px;
   color: whitesmoke;
 }
@@ -645,7 +658,7 @@ label {
   font-size: 12px;
   font-weight: 700;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   color: #484848;
 }
 @media (max-width: 502px) {
@@ -664,7 +677,7 @@ label {
     font-size: 16px;
     font-weight: 700;
     color: whitesmoke;
-    font-family: "Lato", sans-serif;
+    font-family: 'Lato', sans-serif;
     color: #484848;
   }
 }
@@ -686,7 +699,7 @@ label {
   font-size: 16px;
   font-weight: 800;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   color: #484848;
 }
 
@@ -694,7 +707,7 @@ label {
   font-size: 14px;
   font-weight: 600;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   color: #484848;
   cursor: pointer;
 }
@@ -704,19 +717,23 @@ label {
   font-size: 14px;
   font-weight: 600;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 @media (max-width: 502px) {
   .fc-event-title {
     font-size: 10px;
     font-weight: 600;
     color: whitesmoke;
-    font-family: "Lato", sans-serif;
+    font-family: 'Lato', sans-serif;
   }
 }
 
 .fc-event-title-container {
-  background: linear-gradient(90deg, rgba(14, 226, 226, 0.5450980392), rgba(33, 111, 175, 0.9411764706));
+  background: linear-gradient(
+    90deg,
+    rgba(14, 226, 226, 0.5450980392),
+    rgba(33, 111, 175, 0.9411764706)
+  );
 }
 
 .list-tab {
@@ -740,14 +757,14 @@ label {
   font-size: 12px;
   font-weight: 400;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 @media (max-width: 502px) {
   .list-tab a {
     font-size: 10px;
     font-weight: 400;
     color: whitesmoke;
-    font-family: "Lato", sans-serif;
+    font-family: 'Lato', sans-serif;
   }
 }
 .list-tab i {
@@ -776,21 +793,21 @@ label {
   font-size: 20px;
   font-weight: 400;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .wtime {
   font-size: 46px;
   font-weight: 600;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 @media (max-width: 502px) {
   .wtime {
     font-size: 36px;
     font-weight: 600;
     color: whitesmoke;
-    font-family: "Lato", sans-serif;
+    font-family: 'Lato', sans-serif;
   }
 }
 
@@ -798,21 +815,21 @@ label {
   font-size: 14px;
   font-weight: 200;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .wMainTemp {
   font-size: 22px;
   font-weight: 700;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .wmin-max {
   font-size: 16px;
   font-weight: 600;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .weather-container {
@@ -827,8 +844,8 @@ label {
 .weather-info {
   display: flex;
   margin-right: 20px;
-  grid-column: 1/span 4;
-  grid-row: 1/span 1;
+  grid-column: 1 / span 4;
+  grid-row: 1 / span 1;
 }
 
 .weather-icon {
@@ -862,5 +879,5 @@ label {
   font-size: 16px;
   font-weight: 500;
   color: whitesmoke;
-  font-family: "Lato", sans-serif;
-}/*# sourceMappingURL=main.css.map */
+  font-family: 'Lato', sans-serif;
+} /*# sourceMappingURL=main.css.map */
