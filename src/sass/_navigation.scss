@@ -12,15 +12,17 @@ $side-menu-color: #000710;
 .logo {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-top: 10px;
 }
 
 .logoimg {
   height: 100px;
-  text-align: center;
+  width: 50px;
 
   @include respond-small {
     height: 75px;
+    width: 37.5px;
     margin-bottom: 6px;
   }
 }

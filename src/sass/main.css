@@ -4,11 +4,10 @@
   padding: 0px;
 }
 
-/*
-//used when developing css layout-can be commented on when developing
 div {
   border: solid 1px red;
-}*/
+}
+
 /*------LAYOUT---------*/
 .main-container {
   display: grid;
@@ -74,16 +73,18 @@ div {
 .logo {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-top: 10px;
 }
 
 .logoimg {
   height: 100px;
-  text-align: center;
+  width: 50px;
 }
 @media (max-width: 502px) {
   .logoimg {
     height: 75px;
+    width: 37.5px;
     margin-bottom: 6px;
   }
 }

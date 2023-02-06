@@ -5,11 +5,10 @@
   padding: 0px;
 }
 
-/*
 //used when developing css layout-can be commented on when developing
 div {
   border: solid 1px red;
-}*/
+}
 
 //Buttons and Text style
 @mixin heading($font-size, $font-weight) {
