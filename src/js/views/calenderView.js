@@ -59,7 +59,7 @@ Initializes the calendar element with options for the plugins, events, and layou
       calendar = new Calendar(calendarEl, {
         plugins: [dayGridPlugin, interactionPlugin],
         initialView: 'dayGridMonth',
-        events: 'http://localhost:8000/events', // API endpoint to fetch events from the backend
+        events: 'https://digiagenda.onrender.com/events', // API endpoint to fetch events from the backend
 
         eventDidMount: info => {
           const HTML = `<button class = "list-tab" data-date = ${info.event.startStr}> <a>View List</a> <i class="fa-solid fa-circle-info"></i></button>
