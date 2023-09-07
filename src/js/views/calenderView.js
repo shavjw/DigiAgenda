@@ -59,12 +59,36 @@ Initializes the calendar element with options for the plugins, events, and layou
       calendar = new Calendar(calendarEl, {
         plugins: [dayGridPlugin, interactionPlugin],
         initialView: 'dayGridMonth',
-
-        events: [],
+        events: 'http://localhost:8000/events', // API endpoint to fetch events from the backend
 
         eventDidMount: info => {
-          const HTML = `<button class = "list-tab" data-date = ${info.event.startStr}> <a>View List</a> <i class="fa-solid fa-circle-info"></i></button>`;
+          const HTML = `<button class = "list-tab" data-date = ${info.event.startStr}> <a>View List</a> <i class="fa-solid fa-circle-info"></i></button>
+          <button class = "delete-btn" data-date = ${info.event.startStr}  > <a>Delete List</a> <i class="fa-solid fa-circle-xmark"></i></button>`;
           info.el.insertAdjacentHTML('beforeend', HTML);
+          info.el.addEventListener('click', handleButtonClick);
+
+          function handleButtonClick(event) {
+            const clickedElement = event.target.closest('.delete-btn');
+            console.log(clickedElement);
+
+            if (!clickedElement) {
+              return;
+            }
+
+            const date = clickedElement.dataset.date;
+            console.log(date);
+            const events = info.view.calendar.getEvents();
+
+            const eventToRemove = events.find(
+              event => event.start.toISOString().substring(0, 10) === date
+            );
+            console.log(eventToRemove);
+            console.log(events);
+
+            if (eventToRemove) {
+              eventToRemove.remove();
+            }
+          }
         },
 
         dateClick: function (info) {
@@ -82,6 +106,7 @@ Initializes the calendar element with options for the plugins, events, and layou
             end: info.dateStr,
           };
 
+          console.log(eventData);
           calendar.addEvent(eventData);
         },
 
@@ -142,6 +167,18 @@ Adds a click event listener to the calendar and calls the handler function with 
 
       //select date
       const date = listbtn.dataset.date;
+
+      handler(date);
+    });
+  }
+
+  addDeleteAgendaHandler(handler) {
+    this._calender.addEventListener('click', function (e) {
+      const deletebtn = e.target.closest('.delete-btn');
+
+      if (!deletebtn) return;
+
+      const date = deletebtn.dataset.date;
 
       handler(date);
     });

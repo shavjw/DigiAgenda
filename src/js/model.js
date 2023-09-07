@@ -80,7 +80,12 @@ Creates a new task list for the specified date and adds it to the state
 
 @throws {Error} if a task list for the specified date already exists
 */
-export const createNewList = function (date) {
+
+const persistAgendaList = function () {
+  localStorage.setItem('agendas', JSON.stringify(state.database));
+};
+
+export const createNewList = async function (date) {
   try {
     if (state.database.find(list => list.day === date)) {
       throw new Error('List has already been created');
@@ -101,7 +106,26 @@ export const createNewList = function (date) {
       },
     };
 
+    console.log(state.agenda);
+
     state.database.push(state.agenda);
+    console.log(state.database);
+
+    persistAgendaList();
+
+    const response = await fetch(`http://localhost:8000/events`, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({
+        title: 'Agenda',
+        start: date,
+        end: date,
+      }),
+    });
+
+    const eventResponse = await fetch(`http://localhost:8000/events/`);
+    const data = eventResponse.json();
+    console.log(data);
   } catch (err) {
     throw err;
   }
@@ -117,6 +141,22 @@ This function selects the list with the given date
 export const selectList = function (date) {
   const index = findINDEX(state.database, list => list.day === date);
   state.agenda = state.database[index];
+};
+
+export const deleteList = async function (date) {
+  const index = findINDEX(state.database, list => list.day === date);
+
+  state.database.splice(index, 1);
+  console.log(state.database);
+  persistAgendaList();
+
+  const response = await fetch(`http://localhost:8000/events/${date}`, {
+    method: 'DELETE',
+  });
+
+  const eventResponse = await fetch(`http://localhost:8000/events/`);
+  const data = eventResponse.json();
+  console.log(data);
 };
 
 /**
@@ -144,6 +184,7 @@ export const addnewTask = function (name, description, date, priority) {
 
   state.agenda.report.progress =
     ((state.agenda.completed.length / state.agenda.list.length) * 100) / 100;
+  persistAgendaList();
 };
 
 /**
@@ -168,6 +209,7 @@ export const deleteTask = function (id) {
   if (state.agenda.list.length === 0) {
     state.agenda.report.progress = 0;
   }
+  persistAgendaList();
 };
 
 /**
@@ -192,6 +234,7 @@ export const deleteAllTask = function () {
     if (state.agenda.list.length === 0) {
       state.agenda.report.progress = 0;
     }
+    persistAgendaList();
   } catch (err) {
     throw err;
   }
@@ -211,6 +254,7 @@ export const deleteStatusFilter = function () {
     findStatus,
     state.agenda.statusFilters.length
   );
+  persistAgendaList();
 };
 
 /**
@@ -227,6 +271,7 @@ export const deletePritorityFilter = function (priority) {
   );
 
   state.agenda.pritorityFilters.splice(filterValue, 1);
+  persistAgendaList();
 };
 
 /**
@@ -239,6 +284,7 @@ export const deleteAllFilters = function () {
   state.agenda.pritorityFilters.splice(0, state.agenda.pritorityFilters.length);
 
   state.agenda.statusFilters.splice(0, 1);
+  persistAgendaList();
 };
 
 /**
@@ -265,6 +311,7 @@ export const addStatusFilter = function (status) {
     if (status === 'Completed') {
       state.agenda.statusFilters.push(true);
     }
+    persistAgendaList();
   } catch (err) {
     throw err;
   }
@@ -315,6 +362,7 @@ export const addPriorityFilter = function (priority) {
 
       throw new Error(`Filter Not Applicable`);
     }
+    persistAgendaList();
   } catch (err) {
     throw err;
   }
@@ -353,6 +401,7 @@ export const sortList = function (type) {
 
       return originalArray;
     }
+    persistAgendaList();
   } catch (err) {
     throw err;
   }
@@ -377,6 +426,7 @@ export const multfilter = function (array, filters) {
 
     return pritorityFilter && statusFilter;
   });
+  persistAgendaList();
 
   return result;
 };
@@ -407,6 +457,7 @@ export const editTask = function (id) {
     }
 
     loadReportData();
+    persistAgendaList();
   } catch (err) {
     throw err;
   }
@@ -447,6 +498,7 @@ export const loadReportMessage = function () {
 
   state.agenda.report.numOfTask = state.agenda.list.length;
   state.agenda.report.comOfTask = state.agenda.completed.length;
+  persistAgendaList();
 };
 
 /**
@@ -459,4 +511,12 @@ export const loadReportData = function () {
   state.agenda.report.progress =
     ((state.agenda.completed.length / state.agenda.list.length) * 100) / 100;
   if (isNaN(state.agenda.report.progress)) state.agenda.report.progress = 0;
+  persistAgendaList();
 };
+
+const init = function () {
+  const storage = localStorage.getItem('agendas');
+  if (storage) state.database = JSON.parse(storage);
+};
+
+init();

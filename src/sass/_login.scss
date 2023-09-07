@@ -1,0 +1,99 @@
+#wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to top, #0ee2e28b, #216faff0),
+    url('/src/imgs/sky-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: auto;
+  height: 102vh;
+}
+
+#login-section,
+#signup-section {
+  border: 1px solid red;
+  padding: 10px;
+  height: 500px;
+  background-color: $side-menu-color;
+  border-radius: 4px;
+}
+
+.logo-box {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  height: 200px;
+  width: 100px;
+}
+
+#welcome-title {
+  @include heading(18, 800);
+  text-align: center;
+  margin-top: 8px;
+}
+
+#signup-title,
+#login-title {
+  @include heading(16, 400);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#login-form {
+  margin-top: 25px;
+}
+
+#password-input {
+  margin-top: 8px;
+}
+
+#userName-input,
+#password-input {
+  input {
+    width: 300px;
+    margin-left: 4px;
+    padding: 4px;
+    display: flex;
+    margin-top: 4px;
+  }
+  label {
+    margin-left: 6px;
+  }
+}
+
+#login-button-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  gap: 8px;
+}
+
+#login-button {
+  @include bodytext(12px, 500);
+  border: none;
+  background: linear-gradient(90deg, #0ee2e28b, #216faff0);
+  border-radius: 6px;
+  padding: 4px;
+  width: 120px;
+}
+
+#signup-btn {
+  @include bodytext(12px, 500);
+}
+
+#signup-btn:hover {
+  @include bodytext(14px, 500);
+  transition: 0.2s;
+  color: #216faff0;
+}
+
+#signup-section {
+  position: fixed;
+  width: 350px;
+  background-color: #021328;
+}

@@ -5,6 +5,7 @@
   "default": "index.html",
   "scripts": {
     "start": "parcel index.html",
+    "start:login": "parcel login.html",
     "build": "parcel build index.html --dist-dir ./dist"
   },
   "author": "Shavaughan Watson",

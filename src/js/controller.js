@@ -51,6 +51,16 @@ const controlAddNewList = function (date) {
   }
 };
 
+const controlDeleteList = function (date) {
+  try {
+    model.deleteList(date);
+
+    taskMenuview.clearAgenda();
+  } catch (err) {
+    calenderView.renderErrorMessage(err);
+  }
+};
+
 const controlSelectList = function (date) {
   model.selectList(date);
 
@@ -214,6 +224,7 @@ const init = function () {
   calenderView._showCalender();
   calenderView.addNewAgendaHandler(controlAddNewList);
   calenderView.addSelectAgendaHandler(controlSelectList);
+  calenderView.addDeleteAgendaHandler(controlDeleteList);
 
   //Task Controls
   addTaskView.addNewTaskHandler(controlAddNewTask);
