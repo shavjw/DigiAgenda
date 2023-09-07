@@ -2,22 +2,26 @@ const express = require('express');
 const mongoose = require('mongoose');
 const Event = require('./models/event');
 const cors = require('cors'); // Import the cors package
+const dotenv = require('dotenv');
+dotenv.config({ path: './config.env' }); //connects variables in config.env to global node enviroment
 
 const app = express();
 const port = process.env.PORT || 8000;
+
+const DB = process.env.DATABASE.replace(
+  '<PASSWORD>',
+  process.env.DATABASE_PASSWORD
+);
 
 // Enable CORS for all routes
 app.use(cors());
 
 // Connect to MongoDB
 mongoose
-  .connect(
-    'mongodb+srv://ShavDigital92:DRdigital92@cluster0.wszthpd.mongodb.net/',
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    }
-  )
+  .connect(DB, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => console.log('DB connection successful!'));
 
 // Middleware
