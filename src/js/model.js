@@ -113,7 +113,7 @@ export const createNewList = async function (date) {
 
     persistAgendaList();
 
-    const response = await fetch(`http://localhost:8000/events`, {
+    const response = await fetch(`https://digiagenda.onrender.com/events`, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({
@@ -123,7 +123,9 @@ export const createNewList = async function (date) {
       }),
     });
 
-    const eventResponse = await fetch(`http://localhost:8000/events/`);
+    const eventResponse = await fetch(
+      `https://digiagenda.onrender.com/events/`
+    );
     const data = eventResponse.json();
     console.log(data);
   } catch (err) {
@@ -150,11 +152,14 @@ export const deleteList = async function (date) {
   console.log(state.database);
   persistAgendaList();
 
-  const response = await fetch(`http://localhost:8000/events/${date}`, {
-    method: 'DELETE',
-  });
+  const response = await fetch(
+    `https://digiagenda.onrender.com/events/${date}`,
+    {
+      method: 'DELETE',
+    }
+  );
 
-  const eventResponse = await fetch(`http://localhost:8000/events/`);
+  const eventResponse = await fetch(`https://digiagenda.onrender.com/events/`);
   const data = eventResponse.json();
   console.log(data);
 };
