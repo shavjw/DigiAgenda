@@ -3,7 +3,7 @@ on provides a comprehensive overview of the DIGIADGENDA application, its feature
 
 ## Introduction
 
-![Fithub Logo](https://github.com/shavjw/fithub/blob/master/src/assets/login_pic.webp)
+![Fithub Logo](C:\Users\Owner\Desktop\portfolio-website\src\assets\imgs)
 Introduction DIGIADGENDA is a powerful productivity app designed to simplify task management across professional and personal domains. This application aims to alleviate the overwhelming stress associated with maintaining agendas, enhancing both productivity and mental well-being.
 
 ## Contributing
