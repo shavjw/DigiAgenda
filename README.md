@@ -12,7 +12,7 @@ We welcome and appreciate contributions from developers, UX designers, and marke
 
 ### How You Can Contribute
 
-- **Developers:** If you're a developer, you can contribute by implementing new features, fixing bugs, or optimizing existing code. Check out our [list of open issues]((https://github.com/shavjw/DigiAgenda/issues)) for a starting point. Feel free to suggest improvements and discuss potential features in the issue tracker.
+- **Developers:** If you're a developer, you can contribute by implementing new features, fixing bugs, or optimizing existing code. Check out our [list of open issues](https://github.com/shavjw/DigiAgenda/issues) for a starting point. Feel free to suggest improvements and discuss potential features in the issue tracker.
 
 - **UX Designers:** We value user experience, and your insights can make a significant impact. Share your thoughts on how we can enhance the app's usability, suggest improvements to the user interface, or even create wireframes/mockups for proposed changes. Join the discussion in the issue tracker or reach out directly.
 
