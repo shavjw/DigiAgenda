@@ -1,9 +1,10 @@
 # DigiAgenda - README Documentation
-on provides a comprehensive overview of the FITHUB application, its features, setup instructions, and guidelines for usage.
+on provides a comprehensive overview of the DIGIADGENDA application, its features, setup instructions, and guidelines for usage.
 
 ## Introduction
+
 ![Fithub Logo](https://github.com/shavjw/fithub/blob/master/src/assets/login_pic.webp)
-FITHUB is a revolutionary fitness and nutrition app designed to simplify the process of finding suitable exercise routines and nutritional plans tailored to individual goals. This app empowers users to create effective workout regimens and meal plans effortlessly, enhancing their contributing
+Introduction DIGIADGENDA is a powerful productivity app designed to simplify task management across professional and personal domains. This application aims to alleviate the overwhelming stress associated with maintaining agendas, enhancing both productivity and mental well-being.
 
 ## Contributing
 
@@ -15,7 +16,7 @@ We welcome and appreciate contributions from developers, UX designers, and marke
 
 - **UX Designers:** We value user experience, and your insights can make a significant impact. Share your thoughts on how we can enhance the app's usability, suggest improvements to the user interface, or even create wireframes/mockups for proposed changes. Join the discussion in the issue tracker or reach out directly.
 
-- **Marketers:** Marketing plays a crucial role in the success of Fithub. If you have ideas on how to promote the app, increase user engagement, or reach a broader audience, we'd love to hear them. Discussions about branding, social media strategies, or community outreach are all welcomed.
+- **Marketers:** Marketing plays a crucial role in the success of DIGIADGENDA. If you have ideas on how to promote the app, increase user engagement, or reach a broader audience, we'd love to hear them. Discussions about branding, social media strategies, or community outreach are all welcomed.
 
 - **Professionals/Business Owners:** As professionals or business owners, your valuable perspective can greatly contribute to the success of Fithub. You can actively participate by testing the UI of the app, providing feedback on your user experience, and suggesting improvements. Your insights are crucial for ensuring the app meets the needs of a diverse user base. Share your thoughts on the issue tracker or reach out directly.
 
@@ -35,7 +36,7 @@ We welcome and appreciate contributions from developers, UX designers, and marke
 
 - **UX Designers:** We value user experience, and your insights can make a significant impact. Share your thoughts on how we can enhance the app's usability, suggest improvements to the user interface, or even create wireframes/mockups for proposed changes. Join the discussion in the issue tracker or reach out directly.
 
-- **Marketers:** Marketing plays a crucial role in the success of Fithub. If you have ideas on how to promote the app, increase user engagement, or reach a broader audience, we'd love to hear them. Discussions about branding, social media strategies, or community outreach are all welcomed.
+- **Marketers:** Marketing plays a crucial role in the success of DIGIADGENDA. If you have ideas on how to promote the app, increase user engagement, or reach a broader audience, we'd love to hear them. Discussions about branding, social media strategies, or community outreach are all welcomed.
 
 ### Getting Started
 
