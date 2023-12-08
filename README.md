@@ -18,7 +18,7 @@ We welcome and appreciate contributions from developers, UX designers, and marke
 
 - **Marketers:** Marketing plays a crucial role in the success of DIGIADGENDA. If you have ideas on how to promote the app, increase user engagement, or reach a broader audience, we'd love to hear them. Discussions about branding, social media strategies, or community outreach are all welcomed.
 
-- **Professionals/Business Owners:** As professionals or business owners, your valuable perspective can greatly contribute to the success of Fithub. You can actively participate by testing the UI of the app, providing feedback on your user experience, and suggesting improvements. Your insights are crucial for ensuring the app meets the needs of a diverse user base. Share your thoughts on the issue tracker or reach out directly.
+- **Professionals/Business Owners:** As professionals or business owners, your valuable perspective can greatly contribute to the success of DIGIADGENDA. You can actively participate by testing the UI of the app, providing feedback on your user experience, and suggesting improvements. Your insights are crucial for ensuring the app meets the needs of a diverse user base. Share your thoughts on the issue tracker or reach out directly.
 
 ### Getting Started
 
