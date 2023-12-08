@@ -34,7 +34,7 @@ We welcome and appreciate contributions from developers, UX designers, and marke
   git push origin feature/your-feature
 
 4. **Open a pull request to start the discussion and review process.**
-   We appreciate your contributions and look forward to collaborating with you to make Fithub even better!
+   We appreciate your contributions and look forward to collaborating with you to make DIGIADGENDA even better!
 
 #### UX Designers, Marketers, Professional Business/Owners
 1. **Navigate to the Issues Page:**
@@ -47,10 +47,10 @@ Choose the appropriate template if available (e.g., "Feature Request," "Bug Repo
 4. **Provide Details:**
 Clearly describe your thoughts, suggestions, or feedback.
 If you are a UX Designer or Marketer, consider attaching multimedia content such as:
-Wireframes
-Prototypes
-Performance reports
-Business analysis documents
+Wireframes,
+Prototypes,
+Performance reports,
+Business analysis documents, etc.
 
 5. **Leave Comments:**
 Engage in discussions by leaving comments on existing issues.
