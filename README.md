@@ -37,6 +37,11 @@ We welcome and appreciate contributions from developers, UX designers, and marke
    We appreciate your contributions and look forward to collaborating with you to make DIGIADGENDA even better!
 
 #### UX Designers, Marketers, Professional Business/Owners
+Test the app and share your feedback on what can be improved! You can navigate the web app by clicking on the link below: <br> 
+https://fithubapp.netlify.app/
+
+After playing around with the application follow the instructions below to share your opinion. <br>
+
 1. **Navigate to the Issues Page:**
 Visit the Issues Page on our GitHub repository.
 
